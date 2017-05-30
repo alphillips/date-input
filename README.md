@@ -1,16 +1,55 @@
 # date-input
 
-[![Travis][build-badge]][build]
-[![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
+Date input react component
 
-Describe date-input here.
+## Usage
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
+### Install
+```
+npm i @react-ag-components/date-input --save
+```
+### Use in your project
+```
+import DateInput from '@react-ag-components/date-input'
+```
 
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
+```
+handle = (date) => {
+  console.log(date)
+}
 
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
+
+<DateInput
+  id="dob"
+  label="Date of birth"
+  handle={this.handle}
+/>
+
+```
+
+### Properties
+
+
+## Contributing
+
+Get the repository
+```
+git clone https://github.com/alphillips/date-input.git
+```
+
+Update dependencies
+```
+npm install
+```
+
+Run the project
+```
+npm start
+```
+
+### Deploy to npm
+#### Build
+`npm run build -- --copy-files`
+
+#### Publish
+`npm publish --access public`
