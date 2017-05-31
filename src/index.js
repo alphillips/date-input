@@ -1,7 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import moment from 'moment'
-import Input from '@react-ag-components/input'
+import './ui-kit.css'
 import './date-input.css'
 
 class DateInput extends React.Component {
@@ -110,7 +111,7 @@ class DateInput extends React.Component {
         this.setState({
           error: false
         });
-        if(this.props.handle){
+        if(typeof this.props.handle === 'function'){
           this.props.handle(date.format('YYYY-MM-DD'));
         }
       }
@@ -180,4 +181,12 @@ class DateInput extends React.Component {
     )
   }
 }
+
+DateInput.propTypes = {
+  label: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  handle: PropTypes.func,
+  value: PropTypes.string
+};
+
 export default DateInput;
