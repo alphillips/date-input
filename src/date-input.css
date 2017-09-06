@@ -1,34 +1,3 @@
-
-.date-fields{
-  font-size: 1.125rem;
-  margin: 1.2em 0 0 0;
-  padding: 0;
-  border: none;
-}
-
-.hasError {
-    border-left: solid 4px #b7202d;
-    margin-left: 3px;
-    padding-left: 15px;
-}
-
-.hasError span.hasError {
-    color: #b7202d;
-    border: 0;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    font-size: 1rem;
-    clear: both;
-    display: block;
-}
-
-.date-fields span {
-    margin-right: 6px;
-}
-
-.date-fields span {
-    display: inline-block;
-    margin-bottom: 0.5em;
-    width: 4em;
+.date-input-picker{
+  margin-bottom: 2em;
 }

@@ -3,6 +3,8 @@ import {render} from 'react-dom'
 
 import Component from '../../src'
 
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+
 let Demo = React.createClass({
 
   handle(date) {
@@ -10,10 +12,14 @@ let Demo = React.createClass({
   },
 
   render() {
-    return <div>
-      <h1>date-input Demo</h1>
-      <Component id="dob" label="Date of birth" handle={this.handle}/>
-    </div>
+    return (
+      <MuiThemeProvider>
+        <div>
+          <h1>date-input Demo</h1>
+          <Component id="dob" label="Date of birth" handle={this.handle}/>
+        </div>
+      </MuiThemeProvider>
+    )
   }
 })
 
