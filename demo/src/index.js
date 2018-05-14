@@ -3,24 +3,32 @@ import {render} from 'react-dom'
 
 import Component from '../../src'
 
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+//import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+class Demo extends React.Component {
 
-let Demo = React.createClass({
+  constructor(props) {
+      super(props)
 
-  handle(date) {
-    console.log(date)
-  },
+      this.state = {
+        value:''
+      }
+  }
+
+  onChange = (val) => {
+    this.setState((prevState, props) => ({
+      value: val
+    }))
+  }
 
   render() {
     return (
-      <MuiThemeProvider>
-        <div>
-          <h1>date-input Demo</h1>
-          <Component id="dob" label="Date of birth" handle={this.handle}/>
-        </div>
-      </MuiThemeProvider>
+      <div>
+        <h1>date-input Demo</h1>
+        <Component id="dob" label="Date of birth" handle={this.handle}/>
+      </div>
     )
   }
-})
+
+}
 
 render(<Demo/>, document.querySelector('#demo'))
