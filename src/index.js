@@ -31,7 +31,7 @@ class DateInput extends React.Component {
         value:new Date(nextProps.value)
       }))
     }
-    
+
     if(nextProps.value === ''){
       this.setState((prevState, props) => ({
         value:''
@@ -67,7 +67,7 @@ class DateInput extends React.Component {
     this.refs.datePicker.openDialog()
   }
 
-  
+
 
   render() {
 
@@ -93,13 +93,15 @@ class DateInput extends React.Component {
           value={this.state.value}
           onFocus={this.handleFocus}
           autoOk={true}
-        />      
+        />
 
-        <IconButton 
-          tooltip="Clear date" 
+        <IconButton
+          tooltip="Clear date"
           style={{display:'inline-block'}}
-          onClick={this.handleClear}>          
-          <ClearImg />
+          onClick={this.handleClear}
+          style={{color: '#999'}}
+        >
+          <ClearImg style={{color: '#999'}}/>
         </IconButton>
 
       </div>
