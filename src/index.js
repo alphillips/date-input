@@ -99,9 +99,8 @@ class DateInput extends React.Component {
           tooltip="Clear date"
           style={{display:'inline-block'}}
           onClick={this.handleClear}
-          style={{color: '#999'}}
         >
-          <ClearImg style={{color: '#999'}}/>
+          <ClearImg color="#999"/>
         </IconButton>
 
       </div>
