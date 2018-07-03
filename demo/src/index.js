@@ -1,7 +1,7 @@
 import React from 'react'
 import {render} from 'react-dom'
 
-import Component from '../../src'
+import Date from '../../src'
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
@@ -14,7 +14,7 @@ class Demo extends React.Component {
       value:''
     }
   }
-  
+
   handle = (date) => {
     console.log(date)
     this.setState((prevState, props) => ({
@@ -27,7 +27,7 @@ class Demo extends React.Component {
       <MuiThemeProvider>
         <div>
           <h1>date-input Demo</h1>
-          <Component id="dob" label="Date of birth" handle={this.handle} value={this.state.value}/>
+          <Date id="dob" label="Date of birth" handle={this.handle} value={this.state.value} helpText="help is on its way"/>
           <a href="#">Next</a>
         </div>
       </MuiThemeProvider>

@@ -3,6 +3,7 @@ import React from 'react'
 import moment from 'moment'
 import ClearImg from 'material-ui/svg-icons/content/clear';
 import IconButton from 'material-ui/IconButton';
+import Help from '@react-ag-components/help'
 
 import './date-input.css'
 
@@ -76,6 +77,24 @@ class DateInput extends React.Component {
       display:'inline-block'
     }
 
+    let inputContainerStyle = {}
+    let helpContainerStyle = {
+      display:'none'
+    }
+    let className= ''
+
+    if(this.props.helpText){
+      className = 'input-with-help'
+      inputContainerStyle = {
+        width: '90%'
+      }
+
+      helpContainerStyle = {
+        marginTop: '40px'
+      }
+
+    }
+
     return (
       <div className="date-input-picker">
 
@@ -102,6 +121,13 @@ class DateInput extends React.Component {
         >
           <ClearImg color="#999"/>
         </IconButton>
+
+        {this.props.helpText &&
+            <Help
+              text={this.props.helpText}
+              style={helpContainerStyle}
+            />
+        }
 
       </div>
     )
