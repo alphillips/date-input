@@ -1,6 +1,6 @@
 {
   "name": "@react-ag-components/date-input",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "date-input React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -21,7 +21,8 @@
   "dependencies": {
     "moment": "^2.18.1",
     "prop-types": "^15.5.10",
-    "material-ui": "0.19.0"
+    "material-ui": "0.19.0",
+    "@react-ag-components/help": "latest"
   },
   "peerDependencies": {
     "react": "15.x"
