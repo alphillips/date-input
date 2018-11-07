@@ -115,7 +115,6 @@ class DateInput extends React.Component {
         />
 
         <IconButton
-          tooltip="Clear date"
           style={{display:'inline-block'}}
           onClick={this.handleClear}
         >
